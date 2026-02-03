@@ -1,11 +1,11 @@
-FROM eclipse-temurin17-jre-alpine
+FROM eclipse-temurin:17-jre-alpine
 
-WORKDIR app
+WORKDIR /app
 
-COPY target.jar app.jar
+COPY target/*.jar app.jar
 
 ENV JAVA_OPTS="-Xms128m -Xmx384m"
 
 EXPOSE 8080
 
-ENTRYPOINT [sh, -c, java $JAVA_OPTS -jar app.jar]
+ENTRYPOINT ["sh", "-c", "java $JAVA_OPTS -jar app.jar"]
