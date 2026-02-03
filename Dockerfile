@@ -4,7 +4,7 @@ WORKDIR app
 
 COPY target.jar app.jar
 
-ENV JAVA_OPTS=-Xms128m -Xmx384m
+ENV JAVA_OPTS="-Xms128m -Xmx384m"
 
 EXPOSE 8080
 
