@@ -22,7 +22,6 @@ public class CareerQuestionController {
     @Autowired
     private HuggingFaceService huggingFaceService;
 
-    @PreAuthorize("hasAuthority('ADMIN') or hasAuthority('STAFF')")
     @GetMapping
     public List<ResCareerQuestionDto> findAll() {
         return careerQuestionService.findAll();
