@@ -23,6 +23,8 @@ public class Plan extends BaseEntity {
     private String code; // FREE, STANDARD, PREMIUM
 
     private String name; // Free, Standard, Premium
+    @Lob
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     private Double price; // 0, 199000, 499000 (theo tháng)
